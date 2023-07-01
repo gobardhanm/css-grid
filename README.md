@@ -90,7 +90,29 @@
           - grid-row-start
           - grid-row-end
 
+        
+    ### Grid-row and grid-column shorthands:
+
+        Ex:
+
+            .example {
+              grid-row: start / end ;
+              grid-column: start / end;
+            }
+
           
+        > They will overlap if specificly given.
+
+      > .grid {
+          display: grid;
+          grid-template: 100px 100px 100px / 200px 200px 200px;
+        }
+
+        - Here there are 4 rows number and column if we go left to right : (1, 2, 3, 4)
+          
+          And if we go from left to right it will be : (-1, -2, -3, -4)
+
+          That means: (1 = -4 , 2 = -3, 3 = -2, 4 = -1 )
 
 
 
