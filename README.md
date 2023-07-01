@@ -33,4 +33,64 @@
         - fr
         and many more.
 
-        
+
+## Setting up a grid:
+
+  > The first step to creating a grid is declairing "display:grid;" on the parent element.
+
+  > This creates a new grid formatting context. This is similar to when we declare "display: flex;" in many ways.
+
+  > Margin no longer collapse and the direct children of the element become grid items.
+
+  > Similar to flexbox, when we create a new grid container, the flex children will fall onto the grid.
+
+  > The only real change we'll see at first though, is that the margins no longer collapse. We have no dramatic making columns like if we created a flex container.
+
+  
+### To properly use CSS grid we need to define rows and columns.
+
+  - Because flexbox only deals with one dimension, we don't have to worry about rows and columns,we can just swithch back and forth with flex-direction.
+  - With grid, we have both. We can explicitly create them and then place items within the grid that we have created.
+
+    - We do that with "template rows and columns" :-
+
+      Ex: 
+          grid-template-columns: 200px 200px 350px;
+
+          grid-template-rows: 50px 200px;
+
+        Ex: 
+            body {
+                display: grid;
+                grid-template-columns: 300px 100px 100px 200px;
+                grid-template-rows: 750px 500px
+            }
+
+
+            *- Short-hand for grid-template:
+
+              Ex:
+                  body {
+                      display: grid;
+                      grid-template: 100px 400px / 250px 250px 250px;
+                  }
+
+                  (grid-template: rows / columns;)
+
+    ### Placing items on the grid:
+
+      > Content will place itself automatically on the grid.
+      
+      > We can explicitly place items where we want them to be.
+
+      > We can tell grid items exactly where they live within their parent's grid with the following properties:
+
+          - grid-column-start
+          - grid-column-end
+          - grid-row-start
+          - grid-row-end
+
+          
+
+
+
