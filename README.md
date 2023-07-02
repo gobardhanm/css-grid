@@ -115,4 +115,40 @@
           That means: (1 = -4 , 2 = -3, 3 = -2, 4 = -1 )
 
 
+    ### Some similarities to felxbox :
+
+        > Setting "auto" for a row or column
+
+          - When defining our rows (and sometimes our columns), we don't want to set an exact height, we just want it to match the content.
+
+          - We can do that by using the "auto" keyword.
+
+        > If we don't declare a grid-template-row or if we have more rows than we have defined, they will default to "auto".
+
+            - This is a good thing!, It's the behaviour we want most of the time 
+
+            - But like flexbox, grid items stretch by default.
+
+          > "align-items: ; " in grid:
+              - It has two values:
+                  - start
+                  - end
+                  - baseline
+
+          >  "justify-items: ;" in grid:
+          
+
+    ### Grid gap:
+
+        > Creating spacing in layouts just got a lot easier!
+
+          - We can add gap between our rows and columns with:
+
+            - grid-column-gap
+            - grid-row-gap
+            - grid-gap: (shorthand)
+
+        > The "grid-gap" property is being replaced by gap but it is only supported by FireFox.
+        > The "gap" (and gap-row and gap-column) property will work for both grid and flexbox.
+
 
