@@ -151,4 +151,67 @@
         > The "grid-gap" property is being replaced by gap but it is only supported by FireFox.
         > The "gap" (and gap-row and gap-column) property will work for both grid and flexbox.
 
+    ### Implicit and explicit rows and columns:
+
+        > When we declare "display: grid;" on an element, all the grid items are automatically placed inside of a row, even if we haven't created any yet.
+
+        > The same thing happens with the columns, though it will default to only have one column.
+
+        > When we set up grid-template-columns and grid-template rows, we are explicitly stating how big they must be.
+
+        > But sometimes, columns and rows are created automatically.
+        - These are Implicit rows and columns.
+
+        > But hwo big are these implicit rows and columns?
+
+          - They'll default to auto ( the width and height of the content.)
+
+        > If we want, we can state how big we want them to be by using:
+
+              - grid-auto-rows
+              - grid-auto-columns 
+
+    ### Grid areas:
+
+        > Keeping track of row and column numbers can be a pain at times. We can simply thing by assigning "grid-areas:;" .
+
+        > When we created grid areas, we're effectively giving names to different parts of our grid, and then we can assign items to those areas very easily.
+
+        > IT CAN SEEM LIKE A BIT OF EXTRA WORK AT FIRST, BUT THE PAYOFF IS WELL WORTH IT!
+
+          Ex:
+              grid-template-areas: "header header header"
+                                   "sidebar content content";
+
+        > It is very easy to assign a grid item to a grid area!
+
+          Ex: .main-content {
+                grid-area: content;
+              }
+
+    ### minmax() :
+
+        > Setting a min-width and max-width to our template columns and rows.
+        
+        > When assigning a size to our "grid-template-columns or rows", we don't have to give it a specific size.
+
+        > Using "minmax()" we can assign them a minimum and maximum size.
+
+        > We assign the two values inside of the parenthesis, separated by comma.
+
+            Ex:
+                minmax(100px, 300px)
+                minmax(3em, 10em)
+                minimax(200px, 50%)
+
+    
+    ### the "fr" unit :
+
+        > Getting rows and columns to behave more like flex items.
+
+        > The 'fr' unit is used to distribute a fraction of the available space.
+
+        > By using this for the size of a grid-item, it becomes a flexible item and behave more like a flex items does when it's set to 'flex: 1 1 auto;'
+
+
 
