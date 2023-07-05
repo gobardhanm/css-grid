@@ -213,5 +213,43 @@
 
         > By using this for the size of a grid-item, it becomes a flexible item and behave more like a flex items does when it's set to 'flex: 1 1 auto;'
 
+        > It's the easiest way to create columns of equeal size.
+        
+        > When using grid, I tend to use "fr" a lot! But we need to be careful with minmax().
+
+          - Because of how the "fr" unit works, we cannot use it as the minimum size.
+
+
+    ### repeat() :
+
+        > When defining our template-rows or template-columns, if we have multiple columns that are the same width, we can use "repeat()".
+
+        > This makes our lives easier, and can be very useful with the fr unit to quickly make multiple columns that are all the same size.
+
+        > First, we define how many times we want it to be repeated, and then the size. The two values must be comma separated.
+
+        For example, if we want to create a four column grid:
+
+          .example{
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+          }  
+
+
+    ### auto-fit & auto-fill :
+
+        > When using repeat, instead of a set number of times, we can use auto-fit & auto-fill as well.
+
+        > The two of them are different, though the difference can be confusing at first.
+
+        > "auto-fit" will fit the columns you have defined into the available space ( it's a bit more complicated, but essentially this is what it does).
+
+        > "auto-fill" will keep adding in new columns, even if they are empty.
+
+            Ex:
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
 
 
